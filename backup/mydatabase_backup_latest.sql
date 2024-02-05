@@ -1696,6 +1696,9 @@ COPY public.i18n_locale (id, name, code, created_at, updated_at, created_by_id, 
 --
 
 COPY public.posts (id, title, text, publish_time, is_published, created_at, updated_at, created_by_id, updated_by_id) FROM stdin;
+1	Planned Post 	Some Text	2024-02-08 03:30:00	f	2024-02-05 11:26:31.953	2024-02-05 11:26:31.953	1	1
+2	published 2	\N	\N	t	2024-02-05 11:27:37.694	2024-02-05 11:27:42.58	1	1
+3	published 1	Some Text	\N	t	2024-02-05 11:28:00.864	2024-02-05 11:28:00.864	1	1
 \.
 
 
@@ -1704,6 +1707,9 @@ COPY public.posts (id, title, text, publish_time, is_published, created_at, upda
 --
 
 COPY public.posts_user_links (id, post_id, user_id, post_order) FROM stdin;
+1	1	1	1
+2	2	1	2
+3	3	1	3
 \.
 
 
@@ -1752,9 +1758,9 @@ COPY public.strapi_core_store_settings (id, key, value, type, environment, tag) 
 13	plugin_content_manager_configuration_content_types::plugin::users-permissions.permission	{"settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"action","defaultSortBy":"action","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"action":{"edit":{"label":"action","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"action","searchable":true,"sortable":true}},"role":{"edit":{"label":"role","description":"","placeholder":"","visible":true,"editable":true,"mainField":"name"},"list":{"label":"role","searchable":true,"sortable":true}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}},"createdBy":{"edit":{"label":"createdBy","description":"","placeholder":"","visible":false,"editable":true,"mainField":"firstname"},"list":{"label":"createdBy","searchable":true,"sortable":true}},"updatedBy":{"edit":{"label":"updatedBy","description":"","placeholder":"","visible":false,"editable":true,"mainField":"firstname"},"list":{"label":"updatedBy","searchable":true,"sortable":true}}},"layouts":{"list":["id","action","role","createdAt"],"edit":[[{"name":"action","size":6},{"name":"role","size":6}]]},"uid":"plugin::users-permissions.permission"}	object	\N	\N
 18	plugin_upload_settings	{"sizeOptimization":true,"responsiveDimensions":true,"autoOrientation":false}	object	\N	\N
 19	plugin_upload_view_configuration	{"pageSize":10,"sort":"createdAt:DESC"}	object	\N	\N
-20	plugin_upload_metrics	{"weeklySchedule":"0 11 11 * * 1"}	object	\N	\N
 14	plugin_content_manager_configuration_content_types::plugin::users-permissions.user	{"settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"username","defaultSortBy":"username","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"username":{"edit":{"label":"username","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"username","searchable":true,"sortable":true}},"email":{"edit":{"label":"email","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"email","searchable":true,"sortable":true}},"provider":{"edit":{"label":"provider","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"provider","searchable":true,"sortable":true}},"password":{"edit":{"label":"password","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"password","searchable":true,"sortable":true}},"resetPasswordToken":{"edit":{"label":"resetPasswordToken","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"resetPasswordToken","searchable":true,"sortable":true}},"confirmationToken":{"edit":{"label":"confirmationToken","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"confirmationToken","searchable":true,"sortable":true}},"confirmed":{"edit":{"label":"confirmed","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"confirmed","searchable":true,"sortable":true}},"blocked":{"edit":{"label":"blocked","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"blocked","searchable":true,"sortable":true}},"role":{"edit":{"label":"role","description":"","placeholder":"","visible":true,"editable":true,"mainField":"name"},"list":{"label":"role","searchable":true,"sortable":true}},"posts":{"edit":{"label":"posts","description":"","placeholder":"","visible":true,"editable":true,"mainField":"title"},"list":{"label":"posts","searchable":false,"sortable":false}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}},"createdBy":{"edit":{"label":"createdBy","description":"","placeholder":"","visible":false,"editable":true,"mainField":"firstname"},"list":{"label":"createdBy","searchable":true,"sortable":true}},"updatedBy":{"edit":{"label":"updatedBy","description":"","placeholder":"","visible":false,"editable":true,"mainField":"firstname"},"list":{"label":"updatedBy","searchable":true,"sortable":true}}},"layouts":{"list":["id","username","email","confirmed"],"edit":[[{"name":"username","size":6},{"name":"email","size":6}],[{"name":"password","size":6},{"name":"confirmed","size":4}],[{"name":"blocked","size":4},{"name":"role","size":6}],[{"name":"posts","size":6}]]},"uid":"plugin::users-permissions.user"}	object	\N	\N
 16	plugin_content_manager_configuration_content_types::plugin::content-releases.release-action	{"settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"contentType","defaultSortBy":"contentType","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"type":{"edit":{"label":"type","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"type","searchable":true,"sortable":true}},"contentType":{"edit":{"label":"contentType","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"contentType","searchable":true,"sortable":true}},"locale":{"edit":{"label":"locale","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"locale","searchable":true,"sortable":true}},"release":{"edit":{"label":"release","description":"","placeholder":"","visible":true,"editable":true,"mainField":"name"},"list":{"label":"release","searchable":true,"sortable":true}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}},"createdBy":{"edit":{"label":"createdBy","description":"","placeholder":"","visible":false,"editable":true,"mainField":"firstname"},"list":{"label":"createdBy","searchable":true,"sortable":true}},"updatedBy":{"edit":{"label":"updatedBy","description":"","placeholder":"","visible":false,"editable":true,"mainField":"firstname"},"list":{"label":"updatedBy","searchable":true,"sortable":true}}},"layouts":{"list":["id","type","contentType","locale"],"edit":[[{"name":"type","size":6},{"name":"contentType","size":6}],[{"name":"locale","size":6},{"name":"release","size":6}]]},"uid":"plugin::content-releases.release-action"}	object	\N	\N
+20	plugin_upload_metrics	{"weeklySchedule":"45 29 11 * * 1"}	object	\N	\N
 17	plugin_content_manager_configuration_content_types::plugin::content-releases.release	{"settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"name","defaultSortBy":"name","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"name":{"edit":{"label":"name","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"name","searchable":true,"sortable":true}},"releasedAt":{"edit":{"label":"releasedAt","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"releasedAt","searchable":true,"sortable":true}},"actions":{"edit":{"label":"actions","description":"","placeholder":"","visible":true,"editable":true,"mainField":"contentType"},"list":{"label":"actions","searchable":false,"sortable":false}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}},"createdBy":{"edit":{"label":"createdBy","description":"","placeholder":"","visible":false,"editable":true,"mainField":"firstname"},"list":{"label":"createdBy","searchable":true,"sortable":true}},"updatedBy":{"edit":{"label":"updatedBy","description":"","placeholder":"","visible":false,"editable":true,"mainField":"firstname"},"list":{"label":"updatedBy","searchable":true,"sortable":true}}},"layouts":{"list":["id","name","releasedAt","actions"],"edit":[[{"name":"name","size":6},{"name":"releasedAt","size":6}],[{"name":"actions","size":6}]]},"uid":"plugin::content-releases.release"}	object	\N	\N
 22	plugin_users-permissions_grant	{"email":{"enabled":true,"icon":"envelope"},"discord":{"enabled":false,"icon":"discord","key":"","secret":"","callback":"api/auth/discord/callback","scope":["identify","email"]},"facebook":{"enabled":false,"icon":"facebook-square","key":"","secret":"","callback":"api/auth/facebook/callback","scope":["email"]},"google":{"enabled":false,"icon":"google","key":"","secret":"","callback":"api/auth/google/callback","scope":["email"]},"github":{"enabled":false,"icon":"github","key":"","secret":"","callback":"api/auth/github/callback","scope":["user","user:email"]},"microsoft":{"enabled":false,"icon":"windows","key":"","secret":"","callback":"api/auth/microsoft/callback","scope":["user.read"]},"twitter":{"enabled":false,"icon":"twitter","key":"","secret":"","callback":"api/auth/twitter/callback"},"instagram":{"enabled":false,"icon":"instagram","key":"","secret":"","callback":"api/auth/instagram/callback","scope":["user_profile"]},"vk":{"enabled":false,"icon":"vk","key":"","secret":"","callback":"api/auth/vk/callback","scope":["email"]},"twitch":{"enabled":false,"icon":"twitch","key":"","secret":"","callback":"api/auth/twitch/callback","scope":["user:read:email"]},"linkedin":{"enabled":false,"icon":"linkedin","key":"","secret":"","callback":"api/auth/linkedin/callback","scope":["r_liteprofile","r_emailaddress"]},"cognito":{"enabled":false,"icon":"aws","key":"","secret":"","subdomain":"my.subdomain.com","callback":"api/auth/cognito/callback","scope":["email","openid","profile"]},"reddit":{"enabled":false,"icon":"reddit","key":"","secret":"","state":true,"callback":"api/auth/reddit/callback","scope":["identity"]},"auth0":{"enabled":false,"icon":"","key":"","secret":"","subdomain":"my-tenant.eu","callback":"api/auth/auth0/callback","scope":["openid","email","profile"]},"cas":{"enabled":false,"icon":"book","key":"","secret":"","callback":"api/auth/cas/callback","scope":["openid email"],"subdomain":"my.subdomain.com/cas"},"patreon":{"enabled":false,"icon":"","key":"","secret":"","callback":"api/auth/patreon/callback","scope":["identity","identity[email]"]}}	object	\N	\N
 23	plugin_users-permissions_email	{"reset_password":{"display":"Email.template.reset_password","icon":"sync","options":{"from":{"name":"Administration Panel","email":"no-reply@strapi.io"},"response_email":"","object":"Reset password","message":"<p>We heard that you lost your password. Sorry about that!</p>\\n\\n<p>But don’t worry! You can use the following link to reset your password:</p>\\n<p><%= URL %>?code=<%= TOKEN %></p>\\n\\n<p>Thanks.</p>"}},"email_confirmation":{"display":"Email.template.email_confirmation","icon":"check-square","options":{"from":{"name":"Administration Panel","email":"no-reply@strapi.io"},"response_email":"","object":"Account confirmation","message":"<p>Thank you for registering!</p>\\n\\n<p>You have to confirm your email address. Please click on the link below.</p>\\n\\n<p><%= URL %>?confirmation=<%= CODE %></p>\\n\\n<p>Thanks.</p>"}}}	object	\N	\N
@@ -1851,6 +1857,14 @@ COPY public.up_permissions (id, action, created_at, updated_at, created_by_id, u
 8	plugin::users-permissions.auth.emailConfirmation	2024-02-05 11:05:30.689	2024-02-05 11:05:30.689	\N	\N
 7	plugin::users-permissions.auth.resetPassword	2024-02-05 11:05:30.689	2024-02-05 11:05:30.689	\N	\N
 9	plugin::users-permissions.auth.sendEmailConfirmation	2024-02-05 11:05:30.689	2024-02-05 11:05:30.689	\N	\N
+10	api::post.post.getPublishedPosts	2024-02-05 11:25:08.249	2024-02-05 11:25:08.249	\N	\N
+11	api::post.post.getUserPlannedPosts	2024-02-05 11:25:08.249	2024-02-05 11:25:08.249	\N	\N
+12	api::post.post.create	2024-02-05 11:25:08.249	2024-02-05 11:25:08.249	\N	\N
+13	api::post.post.find	2024-02-05 11:25:08.249	2024-02-05 11:25:08.249	\N	\N
+14	api::post.post.update	2024-02-05 11:25:08.249	2024-02-05 11:25:08.249	\N	\N
+15	api::post.post.delete	2024-02-05 11:25:08.249	2024-02-05 11:25:08.249	\N	\N
+16	api::post.post.findOne	2024-02-05 11:25:08.249	2024-02-05 11:25:08.249	\N	\N
+17	api::post.post.getPublishedPosts	2024-02-05 11:25:22.322	2024-02-05 11:25:22.322	\N	\N
 \.
 
 
@@ -1868,6 +1882,14 @@ COPY public.up_permissions_role_links (id, permission_id, role_id, permission_or
 7	5	2	1
 8	6	2	1
 9	9	2	2
+10	11	1	2
+11	10	1	2
+12	16	1	2
+13	13	1	2
+14	14	1	2
+15	12	1	2
+16	15	1	2
+17	17	2	3
 \.
 
 
@@ -1876,8 +1898,8 @@ COPY public.up_permissions_role_links (id, permission_id, role_id, permission_or
 --
 
 COPY public.up_roles (id, name, description, type, created_at, updated_at, created_by_id, updated_by_id) FROM stdin;
-1	Authenticated	Default role given to authenticated user.	authenticated	2024-02-05 11:05:30.662	2024-02-05 11:05:30.662	\N	\N
-2	Public	Default role given to unauthenticated user.	public	2024-02-05 11:05:30.668	2024-02-05 11:05:30.668	\N	\N
+1	Authenticated	Default role given to authenticated user.	authenticated	2024-02-05 11:05:30.662	2024-02-05 11:25:08.236	\N	\N
+2	Public	Default role given to unauthenticated user.	public	2024-02-05 11:05:30.668	2024-02-05 11:25:22.313	\N	\N
 \.
 
 
@@ -1886,6 +1908,7 @@ COPY public.up_roles (id, name, description, type, created_at, updated_at, creat
 --
 
 COPY public.up_users (id, username, email, provider, password, reset_password_token, confirmation_token, confirmed, blocked, created_at, updated_at, created_by_id, updated_by_id) FROM stdin;
+1	User	user@strapi.io	local	$2a$10$LXvmRu.htpRHxo3fZoqrCe35zDcfsT6ILVmKn75m5K2Nk2INebVBa	\N	\N	t	f	2024-02-05 11:26:02.978	2024-02-05 11:26:02.978	1	1
 \.
 
 
@@ -1894,6 +1917,7 @@ COPY public.up_users (id, username, email, provider, password, reset_password_to
 --
 
 COPY public.up_users_role_links (id, user_id, role_id, user_order) FROM stdin;
+1	1	1	1
 \.
 
 
@@ -1980,14 +2004,14 @@ SELECT pg_catalog.setval('public.i18n_locale_id_seq', 1, true);
 -- Name: posts_id_seq; Type: SEQUENCE SET; Schema: public; Owner: myuser
 --
 
-SELECT pg_catalog.setval('public.posts_id_seq', 1, false);
+SELECT pg_catalog.setval('public.posts_id_seq', 3, true);
 
 
 --
 -- Name: posts_user_links_id_seq; Type: SEQUENCE SET; Schema: public; Owner: myuser
 --
 
-SELECT pg_catalog.setval('public.posts_user_links_id_seq', 1, false);
+SELECT pg_catalog.setval('public.posts_user_links_id_seq', 3, true);
 
 
 --
@@ -2085,14 +2109,14 @@ SELECT pg_catalog.setval('public.strapi_webhooks_id_seq', 1, false);
 -- Name: up_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: myuser
 --
 
-SELECT pg_catalog.setval('public.up_permissions_id_seq', 9, true);
+SELECT pg_catalog.setval('public.up_permissions_id_seq', 17, true);
 
 
 --
 -- Name: up_permissions_role_links_id_seq; Type: SEQUENCE SET; Schema: public; Owner: myuser
 --
 
-SELECT pg_catalog.setval('public.up_permissions_role_links_id_seq', 9, true);
+SELECT pg_catalog.setval('public.up_permissions_role_links_id_seq', 17, true);
 
 
 --
@@ -2106,14 +2130,14 @@ SELECT pg_catalog.setval('public.up_roles_id_seq', 2, true);
 -- Name: up_users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: myuser
 --
 
-SELECT pg_catalog.setval('public.up_users_id_seq', 1, false);
+SELECT pg_catalog.setval('public.up_users_id_seq', 1, true);
 
 
 --
 -- Name: up_users_role_links_id_seq; Type: SEQUENCE SET; Schema: public; Owner: myuser
 --
 
-SELECT pg_catalog.setval('public.up_users_role_links_id_seq', 1, false);
+SELECT pg_catalog.setval('public.up_users_role_links_id_seq', 1, true);
 
 
 --

@@ -1,7 +1,7 @@
 
 Strapi Post
 
-yarn i 
+yarn install
 
 docker compose up
 
@@ -15,4 +15,4 @@ admin@gmail.com
 Test1234
 
 than give in admin panel permissions to post:plugin for Authenticated user
-
+and for isPublished to public

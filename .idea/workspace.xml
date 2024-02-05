@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd7001a1-1d93-4203-b0f6-1fb41f80da01" name="Changes" comment="docker settings + restore">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/mydatabase_backup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backup/mydatabase_backup.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backup/mydatabase_backup_latest.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backup/mydatabase_backup_latest.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +57,7 @@
       <workItem from="1707121469826" duration="82000" />
       <workItem from="1707122575007" duration="763000" />
       <workItem from="1707123577841" duration="1074000" />
+      <workItem from="1707124962251" duration="354000" />
     </task>
     <task id="LOCAL-00001" summary="del">
       <created>1707123602404</created>
