@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_HOST: 0.0.0.0
+      POSTGRES_PORT: 5432
+      POSTGRES_SSL: "false"
+    ports:
+      - "5432:5432"
+  backup:
+    image: postgres
+    volumes:
+      - ./backup:/backup
+    depends_on:
+      - postgres
+    command: ["bash", "-c", "PGPASSWORD=mypassword pg_dump -h postgres -U myuser -d mydatabase > /backup/mydatabase_backup.sql"]
+  restore:
+    image: postgres
+    volumes:
+      - ./backup:/backup
+    depends_on:
+      - postgres
+    command: ["bash", "-c", "PGPASSWORD=mypassword psql -h postgres -U myuser -d mydatabase < /backup/mydatabase_backup.sql"]
