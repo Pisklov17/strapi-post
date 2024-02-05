@@ -78,6 +78,7 @@ module.exports = createCoreService('api::post.post',({ strapi }) =>  ({
         }});
       ctx.send(updatedPost);
     } catch (error) {
+      console.log(error)
       ctx.badRequest("Error updating post");
     }
   },
@@ -101,6 +102,17 @@ module.exports = createCoreService('api::post.post',({ strapi }) =>  ({
     } catch (error) {
       ctx.badRequest("Error deleting post");
     }
-  }
+  },
+
+  async getMyPosts(ctx){
+    try {
+      const userId = ctx.state.user.id;
+      const userPosts = await strapi.query('api::post.post').findMany({where: { user: userId }});
+      ctx.send(userPosts);
+    } catch (error) {
+      console.log(error)
+      ctx.badRequest("Error updating post");
+    }
+  },
 
 }));

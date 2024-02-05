@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd7001a1-1d93-4203-b0f6-1fb41f80da01" name="Changes" comment="docker settings + restore">
+    <list default="true" id="fd7001a1-1d93-4203-b0f6-1fb41f80da01" name="Changes" comment="readme + updated backup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/mydatabase_backup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backup/mydatabase_backup.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backup/mydatabase_backup_latest.sql" beforeDir="false" afterPath="$PROJECT_DIR$/backup/mydatabase_backup_latest.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/post/controllers/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/post/controllers/post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/post/routes/postPublish.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/post/routes/postPublish.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/post/services/post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/post/services/post.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +61,8 @@
       <workItem from="1707121469826" duration="82000" />
       <workItem from="1707122575007" duration="763000" />
       <workItem from="1707123577841" duration="1074000" />
-      <workItem from="1707124962251" duration="354000" />
+      <workItem from="1707124962251" duration="499000" />
+      <workItem from="1707125944686" duration="1640000" />
     </task>
     <task id="LOCAL-00001" summary="del">
       <created>1707123602404</created>
@@ -73,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707124103995</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="readme + updated backup">
+      <created>1707125456916</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707125456916</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -82,6 +94,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="del" />
     <MESSAGE value="docker settings + restore" />
-    <option name="LAST_COMMIT_MESSAGE" value="docker settings + restore" />
+    <MESSAGE value="readme + updated backup" />
+    <option name="LAST_COMMIT_MESSAGE" value="readme + updated backup" />
   </component>
 </project>

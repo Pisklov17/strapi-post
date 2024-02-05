@@ -23,6 +23,10 @@ module.exports = createCoreController(
     delete(ctx) {
       return strapi.service('api::post.post').deletePost(ctx);
     },
+
+      getMyPosts(ctx) {
+          return strapi.service('api::post.post').getMyPosts(ctx);
+      },
   })
 );
 

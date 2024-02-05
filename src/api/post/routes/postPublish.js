@@ -8,6 +8,10 @@ module.exports = {
       method: 'GET',
       path: '/plannedPosts',
       handler: 'post.getUserPlannedPosts',
+    }, {
+      method: 'GET',
+      path: '/my',
+      handler: 'post.getMyPosts',
     },
   ]
 }
