@@ -25,4 +25,4 @@ services:
       - ./backup:/backup
     depends_on:
       - postgres
-    command: ["bash", "-c", "PGPASSWORD=mypassword psql -h postgres -U myuser -d mydatabase < /backup/mydatabase_backup.sql"]
+    command: ["bash", "-c", "PGPASSWORD=mypassword psql -h postgres -U myuser -d mydatabase < /backup/mydatabase_backup_latest.sql"]
