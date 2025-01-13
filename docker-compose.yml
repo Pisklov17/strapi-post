@@ -1,28 +1,27 @@
-version: '3'
+version: "3.8"
 
 services:
-  postgres:
-    image: postgres
-    environment:
-      POSTGRES_DB: mydatabase
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_HOST: 0.0.0.0
-      POSTGRES_PORT: 5432
-      POSTGRES_SSL: "false"
+  strapi:
+    image: strapi/strapi
+    container_name: strapi
     ports:
-      - "5432:5432"
-  backup:
-    image: postgres
+      - "${PORT}:${PORT}"
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+      DATABASE_SSL: ${DATABASE_SSL}
+      HOST: ${HOST}
+      PORT: ${PORT}
+      APP_KEYS: ${APP_KEYS}
+      API_TOKEN_SALT: ${API_TOKEN_SALT}
+      ADMIN_JWT_SECRET: ${ADMIN_JWT_SECRET}
+      TRANSFER_TOKEN_SALT: ${TRANSFER_TOKEN_SALT}
+      JWT_SECRET: ${JWT_SECRET}
     volumes:
-      - ./backup:/backup
-    depends_on:
-      - postgres
-    command: ["bash", "-c", "PGPASSWORD=mypassword pg_dump -h postgres -U myuser -d mydatabase > /backup/mydatabase_backup.sql"]
-  restore:
-    image: postgres
-    volumes:
-      - ./backup:/backup
-    depends_on:
-      - postgres
-    command: ["bash", "-c", "PGPASSWORD=mypassword psql -h postgres -U myuser -d mydatabase < /backup/mydatabase_backup_latest.sql"]
+      - ./app:/srv/app
+    env_file:
+      - .env
