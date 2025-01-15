@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   strapi:
-    image: strapi/strapi:v4
+    build: .  # Builds the Strapi project from the current directory (where the Dockerfile is)
     container_name: strapi-app
     ports:
       - "${PORT}:${PORT}"
