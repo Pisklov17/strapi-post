@@ -22,7 +22,7 @@ services:
       TRANSFER_TOKEN_SALT: ${TRANSFER_TOKEN_SALT}
       JWT_SECRET: ${JWT_SECRET}
     volumes:
-      - ./app:/srv/app
+      - .:/srv/app
       - ./data:/srv/app/data
     env_file:
       - .env
