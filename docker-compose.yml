@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   strapi:
-    image: strapi/strapi:latest
+    image: strapi/strapi:v4
     container_name: strapi-app
     ports:
       - "${PORT}:${PORT}"
@@ -23,5 +23,6 @@ services:
       JWT_SECRET: ${JWT_SECRET}
     volumes:
       - ./app:/srv/app
+      - ./data:/srv/app/data
     env_file:
       - .env
