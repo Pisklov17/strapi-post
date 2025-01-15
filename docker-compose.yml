@@ -2,6 +2,8 @@ version: "3.8"
 
 services:
   strapi:
+    build: 
+      context: context: https://github.com/Pisklov17/strapi-post.git
     image: strapi/strapi
     container_name: strapi
     ports:
