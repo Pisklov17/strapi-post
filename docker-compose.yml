@@ -1,11 +1,10 @@
 version: "3.8"
 
 services:
+services:
   strapi:
-    build: 
-      context: context: https://github.com/Pisklov17/strapi-post.git
-    image: strapi/strapi
-    container_name: strapi
+    image: strapi/strapi:latest
+    container_name: strapi-app
     ports:
       - "${PORT}:${PORT}"
     environment:
